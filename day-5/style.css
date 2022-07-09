@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+.container {
+    width: 1320px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.row > * {
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    
+}
+.col-1 {
+    width: 8.333333%;
+}
+.col-2 {
+    width: 16.666667%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-5 {
+    width: 41.666667%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.333333%;
+}
+.col-8 {
+    width: 66.666667%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.333333%;
+}
+.col-11 {
+    width: 91.666667%;
+}
+.col-12 {
+    width: 100%;
+}
+/* .w-50 {
+    max-width: 50%;
+} */
+.section-heading {
+    text-align: center;
+}
+.a-center {
+    align-items: center;
+}
+.list-none {
+    list-style-type: none;
+   
+}
+.j-center {
+    justify-content: center;
+}
+.d-flex {
+    display: flex;
+}
+.j-end {
+    justify-content: end;
+}
+.money {
+    text-transform: uppercase;
+}
+.ti-angle-down {
+    height: 13px;
+}
+.logo-cart {
+    text-transform: uppercase;
+}
+.menu {
+    list-style: none;
+    
+}
+.menu-link {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #333;
+}
+.menu-item {
+    text-transform: uppercase;
+}
+.devider {
+    align-self: stretch;
+    border-right: 1px dotted grey;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.b-solid {
+    border-bottom: 0.5px solid #777;
+    border-top: 0.5px solid #777 ;
+}
+h2 {
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+.list-review {
+    list-style: none;
+}
+.text-add {
+    font-size: 14px;
+}
+.text-review {
+    padding-left: 10px;
+}
+.section-content {
+    padding-top: 30px;
+}
+.back-menu {
+    padding-top: 5px;
+}
+.review {
+    padding-top: 10px;
+}
+.price {
+    font-size: 25px;
+    padding-top: 15px;
+}
+.ti-money {
+    font-size: 20px;
+}
+.info-product {
+    padding-top: 15px;
+}
+.info {
+    font-size: 16px;
+}
+.info a {
+    text-decoration: none;
+    color: rgb(84, 223, 119);
+}
+h4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.text-info {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.5;
+
+}
+.option {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.order {
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.color {
+    padding-left: 20px;
+ 
+}
+
+.select {
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+.b-solid {
+    border: 0.5px solid rgb(219, 209, 209);
+    color: rgb(172, 164, 164);
+}
+.w-150 {
+    width: 150px;
+    
+}
+.j-space {
+    justify-content: space-around;
+}
+.h-20 {
+    height: 25px;
+}
+.select-qty {
+    padding-right: 10px;
+}
+.clear-section {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 30px;
+    padding-left: 15px;
+    text-decoration: underline;
+}
+.t-trans {
+    text-transform: uppercase;
+}
+.w-185 {
+    width: 185px;
+
+}
+.add-cart {
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.add-wishlist {
+    font-size: 16px;
+    border: 0.3px solid #777;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+}
+
+.add {
+    padding-bottom: 35px;
+}
+.h-50 {
+    height: 50px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.footer {
+    text-transform: capitalize;
+    margin-top: 50px;
+  
+    
+}
+.like-fb {
+    background-color: #1877f2;
+    color: #fff;
+    height: 21px;
+}
+.share-fb {
+    background-color: #1877f2;
+    color: #fff;
+    height: 21px;
+}
+
+
+.boder-solid {
+    border: 0.1px solid rgb(207, 198, 198);
+
+}
+.gap-3 {
+    gap: 5px;
+}
+.text-color {
+    color: rgb(184, 175, 175);
+}
+.paner {
+    height: 40px;
+    border-top: 0.5px solid;
+    border-bottom: 0.5px solid;
+}
+.paner .text-share {
+    font-size: 13px;
+    line-height: 13px;
+}
+.gap-7 {
+    gap: 10px;
+}
+.img-model {
+    width: 855px;
+    height: 600px;
+    max-width: 100%;
+}
+.img-end {
+    height: 150px;
+    /* max-width: 100%; */
+    width: 200px;
+}
+.p-top {
+    padding-top: 15px;
+}
+.pr-8 {
+    padding-right: 8.33px;
+}
+
+

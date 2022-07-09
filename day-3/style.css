@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0%;
+    background-color: rgb(238, 248, 244);
+}
+.heading-menu {
+    text-transform: uppercase;
+    list-style-type: none;
+
+}
+ul {
+    list-style: none;
+}
+ul.list-menu {
+    display: flex;
+    justify-content: center;
+
+}
+ul.list-menu a {
+    display: block;
+    color: #777;
+    padding: 15px 0;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.5;
+
+}
+ul.list-menu li {
+    padding: 0 20px;
+    text-transform: uppercase;
+    
+}
+ul.list-menu a:hover {
+    opacity: 0.8;
+}
+.search-menu {
+    text-transform: uppercase;
+    list-style-type: none;
+
+}
+ul.list-search {
+    display: flex;
+    justify-content: center;
+}
+ul.list-search li {
+    text-transform: uppercase;
+    padding: 0 10px;
+    
+}
+ul.list-search a {
+    text-decoration: none;
+    color: #26a69a;
+
+}
+ul.list-search a:hover {
+    opacity: 0.9;
+    font-weight: bold;
+}
+.list-blog {
+    display: flex;
+    height: 360px;
+}
+.img-thumnal .img-name {
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+}
+
+.blog-1,
+.blog-2,
+.blog-3,
+.blog-4,
+.blog-5,
+.blog-6 {
+    width: 300px;
+    margin-top: 30px;
+  
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.ml-150 {
+    margin-left: 50px;
+}
+.text-center {
+    padding-top: 6px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.blog-1:hover,
+.blog-2:hover,
+.blog-3:hover {
+    border: 0.5px solid rgb(206, 188, 188);
+}
+.blog-info {
+    color: #464646;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+ol.new-extra {
+    display: block;
+}
+.new-content {
+    width: 280px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 22px;
+    text-transform: capitalize;
+   
+}
+.mt-30 {
+    margin-top: 100px;
+    color: #343a40;
+
+}
+h5 {
+    text-transform: capitalize;
+    font-size: 22px;
+    color: #464646;
+}
+h11 {
+    text-transform: capitalize;
+    font-size: 22px;
+    color: #464646;
+    line-height: 1.2;
+    font-weight: 500;
+
+}
+ol.new-extra a {
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.5;
+    color: #343a40;
+    
+   
+}
+.blog-4:hover,
+.blog-5:hover,
+.blog-6:hover {
+    border: 0.5px solid rgb(206, 188, 188);
+}
+ol.new-extra a:hover {
+    text-decoration: underline;
+}
+ol.new-extra li {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.blog-7,
+.blog-8,
+.blog-9 {
+    width: 300px;
+    margin-top: 30px;
+}
+.blog-7:hover,
+.blog-8:hover,
+.blog-9:hover {
+    border: 0.5px solid rgb(206, 188, 188);
+}

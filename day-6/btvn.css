@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+   text-align: center;
+}
+thead {
+    background-color: #d9534f;
+    color: #fff;
+}
+.t-color {
+    color: #900;
+    font-size: 22px
+}
+.t-size {
+    font-size: 22px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+.d-flex {
+    display: flex;
+
+}
+.j-center {
+    justify-content: center;
+}
+.pt-5 {
+    padding-top: 5px;
+}
+.table, tr, th,  td {
+    
+    border: 0.2px solid #777;
+    border-collapse: collapse;
+}
+.table {
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.size-h {
+    height: 30px;
+}

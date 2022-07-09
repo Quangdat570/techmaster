@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuighe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../day-5/icon/themify-icons/themify-icons.css">
+</head>
+<body>
+    <section class="head">
+        <div class="container d-flex a-center j-between border-line p-fixed">
+            <div class="poster">
+                <img src="https://vuighe.net/assets/img/logo_v8.png" alt="" class="img-poster">
+            </div>
+            <div class="menu-search d-flex w-847 j-between">
+                <div class="head-menu d-flex gap-20">
+                    <div class="menu-anime border-radius w-70 h-30 d-flex a-center j-center">Anime</div>
+                    <div class="menu-movie border-radius  w-70 h-30 d-flex a-center j-center">Movie</div>
+                    <div class="menu-new border-radius  w-70 h-30 d-flex a-center j-center">Tin Tức</div>
+                    <div class="menu-manga border-radius  w-70 h-30 d-flex a-center j-center">Truyện</div>
+                    <div class="menu-rank border-radius  w-70 h-30 d-flex a-center j-center">BXH</div>
+                </div>
+    
+                <div class="search d-flex static">
+                    <form action="search-menu-anime">
+                        <div class="search-result">
+                            <label for="search-anime"></label>
+                            <input type="text" name="search" id="search-menu" placeholder="Tìm kiếm anime" class="search-anime">
+                            
+                        </div>
+                    </form>
+                    <i class="ti-search h-20"></i>
+                </div>
+            </div>
+            
+
+            <div class="info-menu d-flex static ">
+                <div class="icon-info d-flex a-center j-center border-50 "><i class="ti-info-alt "></i></div>
+                <div class="icon-info d-flex a-center j-center border-50 "><i class="ti-control-record "></i></div>
+                <div class="icon-info user-icon d-flex a-center j-center background-color static">
+                    <i class="ti-user static ">
+
+
+                    </i>
+
+                    <div class="containe mr-top b-solid absolute left-top background-white p-fixed display-none " >
+                        <div class="head ">
+                            <div class="containe pl-20 pt-20">
+                                <div class="heads">
+                                    <div class="text-heads">
+                                        <h1 class="text-heading">Đăng Ký</h1>
+                                    </div>
+                                    <div class="text-sup pt-10">
+                                        Nhanh chóng và dễ dàng
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section  ">
+                            <div class="containe pl-20 pt-20">
+                
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <form action="first-name">
+                                                    <div class="user-name">
+                                                        <label for="user"></label>
+                                                        <input type="text" name="username" id="user" placeholder="Họ" class="size-name">
+                                                    </div>
+                        
+                                                </form>
+                                            </div>
+                                            <div class="col-6">
+                                                <form action="last-name">
+                                                    <div class="name">
+                                                        <label for="text-name"></label>
+                                                        <input type="text" name="username" id="text-name" placeholder="Tên" class="size-name">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-20">
+                                            <div class="col-12">
+                                                <form action="num-phone">
+                                                    <div class="text-phone">
+                                                        <label for="mail"></label>
+                                                        <input type="email" name="phone-mail" id="mail" placeholder="Số di động hoặc email" class="size">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-20">
+                                            <div class="col-12">
+                                                <form action="pass-word">
+                                                    <div class="pass">
+                                                        <label for="password"></label>
+                                                        <input type="password" name="pass" id="password" placeholder="Mật khẩu mới" class="size">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="date pt-20">Sinh nhật</div>
+                                        <div class="date-time d-flex gap-10 pt-10">
+                                            <div class="day ">
+                                                <label for="day"></label>
+                                                <select name="num-day" id="day" class="day">
+                                                   <option value="1">1</option>
+                                                   <option value="2">2</option>
+                                                   <option value="3">3</option>
+                                                   <option value="4">4</option>
+                                                   <option value="5">5</option>
+                                                   <option value="6">6</option>
+                                                   <option value="7">7</option>
+                                                   <option value="8">8</option>
+                                                   <option value="9">9</option>
+                                                   <option value="10">10</option>
+                                                   <option value="11">11</option>
+                                                   <option value="12">12</option>
+                                                   <option value="13">13</option>
+                                                   <option value="14">14</option>
+                                                   <option value="15">15</option>
+                                                   <option value="16">16</option>
+                                                   <option value="17">17</option>
+                                                   <option value="18">18</option>
+                                                   <option value="19">19</option>
+                                                   <option value="20">20</option>
+                                                   <option value="21">21</option>
+                                                   <option value="22">22</option>
+                                                   <option value="23">23</option>
+                                                   <option value="24">24</option>
+                                                   <option value="25">25</option>
+                                                   <option value="26">26</option>
+                                                   <option value="27">27</option>
+                                                   <option value="28">28</option>
+                                                   <option value="29">29</option>
+                                                   <option value="30">30</option>
+                                                </select>
+                                            </div>
+                                        
+                                       
+                                            <div class="month">
+                                                <label for="month"></label>
+                                                <select name="num-month" id="month" class="month">
+                                                   <option value="1">1</option>
+                                                   <option value="2">2</option>
+                                                   <option value="3">3</option>
+                                                   <option value="4">4</option>
+                                                   <option value="5">5</option>
+                                                   <option value="6">6</option>
+                                                   <option value="7">7</option>
+                                                   <option value="8">8</option>
+                                                   <option value="9">9</option>
+                                                   <option value="10">10</option>
+                                                   <option value="11">11</option>
+                                                   <option value="12">12</option>
+                                                   <option value="13">13</option>
+                                                   <option value="14">14</option>
+                                                   <option value="15">15</option>
+                                                   <option value="16">16</option>
+                                                   <option value="17">17</option>
+                                                   <option value="18">18</option>
+                                                   <option value="19">19</option>
+                                                   <option value="20">20</option>
+                                                   <option value="21">21</option>
+                                                   <option value="22">22</option>
+                                                   <option value="23">23</option>
+                                                   <option value="24">24</option>
+                                                   <option value="25">25</option>
+                                                   <option value="26">26</option>
+                                                   <option value="27">27</option>
+                                                   <option value="28">28</option>
+                                                   <option value="29">29</option>
+                                                   <option value="30">30</option>
+                
+                                                </select>
+                                            </div>
+                                        
+                
+                                       
+                                            <div class="year">
+                                                <label for="year"></label>
+                                                <select name="num-year" id="year" class="year">
+                                                    <option value="2010">2010</option>
+                                                    <option value="">2011</option>
+                                                    <option value="">2012</option>
+                                                    <option value="">2013</option>
+                                                    <option value="">2014</option>
+                                                    <option value="">2015</option>
+                                                    <option value="">2016</option>
+                                                    <option value="">2017</option>
+                                                    <option value="">2018</option>
+                                                    <option value="">2019</option>
+                                                    <option value="">2020</option>
+                                                    <option value="">2021</option>
+                                                    <option value="">2022</option>
+                                                    <option value="">2023</option>
+                                                    <option value="">2024</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-gender pt-20 pb-3">Giới tính</div>
+                                        
+                                        <div class="gender d-flex gap-10 h-30 pt-5">
+                                            <div class="female d-flex a-center j-space b-solid h-30">
+                                                <label for="female">Nữ</label>
+                                                <input type="radio" name="gender" id="female" >
+                                            </div>
+                                            <div class="male d-flex a-center j-space b-solid h-30">
+                                                <label for="male">Nam</label>
+                                                <input type="radio" name="gender" id="male">
+                                            </div>
+                                            <div class="setting d-flex a-center j-space b-solid h-30">
+                                                <label for="setting">Tùy chỉnh</label>
+                                                <input type="radio" name="gender" id="setting">
+                                            </div>
+                                        </div>
+
+                                        <div class="subcriber pt-20">
+                                            <button class="button">Đăng ký</button>
+                                        </div>
+                
+                                       
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+   
+
+    <div class="section pd-top-80 ">
+        <div class="container d-flex j-between">
+            <div class="poster-thumbnail ">
+                <div class="list-poster-thumbnail static ">
+                    <img  src="https://vuighe.net/mmo/slider-dldl.jpg" alt="">
+                    <div class="Surrounded d-flex">
+                        <div class="btn-play-head absolute d-flex a-center j-center">Chơi ngay</div>
+                        <div class="meta-head absolute d-flex ">
+                         <div class="title">
+                                <div class="text-title">Game Đấu La Đại Lục</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sub-list d-flex gap-10 pd-top">
+                    <img class="img-list-poster" src="https://s199.imacdn.com/vg/2021/10/10/d8fee77267b28507_5ecea58161a03d8a_2225981633864797661628.jpg" alt="">
+                    <img class="img-list-poster" src="https://s199.imacdn.com/vg/2022/03/23/c1aa39293c5ab28a_ba194e04c16acd98_25004316480362556118684.jpg" alt="">
+                    <img class="img-list-poster" src="https://s199.imacdn.com/vg/2022/03/20/5a14af1e19346a9a_e5ffac4950e075bc_19538516477838843118684.jpg" alt="">
+                </div>
+
+            </div>
+
+            <div class="poster-sub ">
+                <div class="list-poster-sub ">
+
+                    <div>
+                        <img class="img-list-poster " src="https://s199.imacdn.com/vg/2022/03/23/3450327ed09a121a_cbcf1af85eca6ca7_54903416480426926118684.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="img-list-poster pd-top" src="https://s199.imacdn.com/vg/2022/03/23/dec8eac4313b8f21_8873c5fda2dc8b4f_4582016480410141118684.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="img-list-poster pd-top" src="https://s199.imacdn.com/vg/2022/03/24/efaed638fb29b6ef_7a5b5a91d691bf48_47388816481221477118684.jpg" alt="">
+                    
+                    </div>
+                    <div>
+                        <img class="img-list-poster pd-top" src="https://s199.imacdn.com/vg/2022/03/24/e9ba6b39c946a642_4415a96836e029b9_3643841648094617861628.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">tập mới nhất</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex f-wrap gap-10">
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/15/dd35c135abda4d9b_207050af36736755_2219016552283905118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center back-color">Hoàn thành</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Yuusha, Yamemasu</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 12 - Từ bỏ làm dũng sĩ</div>
+                                    <div class="views">3,404 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/13/605c3f71ffd5b75e_f976c04ed858163f_1836716551180953118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center back-color">Hoàn thành</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Spriggan</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 6 - Vương quốc bị lãng quên</div>
+                                    <div class="views">1,890 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/13/55035a55d93545f7_3be5196a92080c07_2704216551181058118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Baraou no Souretsu</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 12 - Bài hát của Eiko</div>
+                                    <div class="views">1,050 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/13/4ceb6490c47478db_41c155ec713a6834_4006316550562869118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center back-color">Hoàn thành</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Otome Game Sekai wa Mob ni Kibishii Sekai desu</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 12 - Cho dù thế giới này có...</div>
+                                    <div class="views">15,005 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/13/11b39d022010594e_db2f6e4c24d275a3_2456416550565346118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Summertime Render</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 10 - Đi vào bóng tối</div>
+                                    <div class="views">5,484 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/13/072bc5f6a1f02f95_194d1e7fe7b329bd_3061316550561285118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Boruto: Naruto Next Generations</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 254 - Vòng xoáy trả thù</div>
+                                    <div class="views">22,520 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/ab8ac2d2497d6bc1_302517c119f1c12b_10410416550287518129205.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Kawaii dake ja Nai Shikimori-san</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 9 - Ngây thơ và vụng về</div>
+                                    <div class="views">3,198 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/ac277329ffdd8a43_693562a1826d8c86_1845316549722736118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center back-color">Hoàn thành</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Rikei ga Koi ni Ochita no de Shoumei shitemita</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 24 - Tôi đã cố gắng ...</div>
+                                    <div class="views">2,716 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/94daab711fdc7b83_7f4090d5910f3812_5342416549716267118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Build Divide</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 23 - Ước mơ vô tận</div>
+                                    <div class="views">1,253 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/aea119c1616330bf_228ea7e484c56945_2698616549715155118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+                         
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Kunoichi Tsubaki no Mune no Uchi</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 11 - Thuật quyến rũ</div>
+                                    <div class="views">1,082 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/07e333b515c79ec2_97aa348f127d251a_3552616549708486118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Spy x Family</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 11 - Ngôi sao Stella</div>
+                                    <div class="views">34,764 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/12/0842a046e017f783_4c08e17ba49dbb17_11444616549693424118684.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left">
+                                    <div class="text-title">Love All Play</div>
+                                </div>
+
+                                <div class="meta-info d-flex j-space">
+                                    <div class="chapter">Tập 12 - Gió mạnh</div>
+                                    <div class="views">1,329 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-anime pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h4 class="section-heading">tin anime</h4>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex f-wrap gap-10">
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/14/8805e832c558e0b8_73c4444c0d7089c8_3856116552234334185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Netizen toàn cầu sốc trước thông tin Buggy trở thành Tứ hoàng!</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/14/dc647a5ba96b8847_64be82aec3775e28_3947016552144564185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">[Spoiler] One Piece - Chương 1053: Lộ diện Tân Tứ Hoàng, Luffy và...!</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/14/97819af79afa86cb_7267dfca39de0f2a_4222116551412976185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Overlord IV đã chính thức công bố thời gian lên sóng! </div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/13/7a28fc8581c06766_ef3e3692a9f991f9_6258816551258054185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Yuusha Ga Shinda! - Anh Hùng Chết Yểu!</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/13/e6292d46508147c6_0170d7da0e670e39_5838816550859912734221.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Shine Post - Con đường để trở thành idol</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/daea13e3d68db2b3_0d660a8ae17a4685_5840216550510715185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Top 10 bộ anime "tân binh" không thể bỏ lỡ vào mùa hè 2022! </div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/d15a42fcb6273e0f_c8421e1a123e6610_4717516550498825185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Boruto sẽ có ca khúc mở đầu và kết thúc mới kể từ tháng 7! </div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/7d57bb806cd90e15_44698ad3121cf8f7_4448416550495452185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Dr. Stone sẽ phát hành tập đặc biệt về Ryusui vào tháng 7 năm nay!</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/d22357a1366ede5f_5b1cd467079de86a_7749916550483184185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Lễ diễu hành: Natsu no Manimani sắp sửa được tổ chức tại Tp. Hồ Chí Minh!</div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/75e9d24bd91b685b_cb749e55f2ff038e_4626216550467183185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Chiêu thức mới của Gohan sẽ lộ diện trong Dragon Ball Super: Heroes! </div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/4022f5854521549e_e3a9c03bcddfa6ae_5185716550309346185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">One Piece: Yamato là nam hay nữ? Hay là thuộc cộng đồng LGBT? </div>
+                    </div>
+                    <div class="post d-flex gap-10">
+                        <img 
+                        src="https://s199.imacdn.com/ta/2022/06/12/db9b388971fb0a9c_f51a03e6ee1dcb07_6682016550215364185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-150">
+                         <div class="post-title">Anime Godzilla Singular Point sẽ được chuyển thể ngược thành novel ngoại truyện!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">phim hoạt hình</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex f-wrap gap-10">
+                    <div class="post static background-image">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2021/07/29/460aae7096ba7c8d_b93565fe0b046380_658571627551248916068.jpg"
+                        alt=""
+                        class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center  display-none"></div>
+                            <div class="meta absolute d-flex f-column">
+                                <div class="title padding-left absolute bottom-30 ">
+                                    <div class="text-title background-image">Cậu Đúng Là Một Thiên Tài</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">45,867 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static ">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2021/12/14/d72b9bebdd434e68_cb768d6546654c53_2467811639482188416068.jpg"
+                        alt=""
+                        class="post-thumbnail background-image">
+
+                        <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Khe Hở Không Gian</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">32,644 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2021/12/27/8ed8d5b63c090703_3f3852e763504138_2285221640621442116068.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Phàm Nhân Tu Tiên: Ma Đạo Tranh Phong</div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">205,922 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2022/05/06/ae317df873ab1426_af71133b21f92e97_50096165179514583816.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Tân Tần Thời Minh...</div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">59,734 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2022/04/25/918d85ef637af316_84057cccf5a2fb75_694141650878132216068.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Băng Hỏa Ma Trù </div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">160,342 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2022/04/16/0a3165ba007b0ad9_0664d5cdb335dbb6_693191650084501916068.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Vũ Động Càn Khôn (Phần 3)</div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">37,575 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2021/11/14/1fd0c068ae17c86c_9e2c59bb15e9461b_351141636876960516068.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Viên Ngọc Thần: Chuyện...</div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">1,144 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s198.imacdn.com/ff/2022/06/02/7b2091458446b9d3_9d3e0037e8105065_378961654154825216068.jpg"
+                        alt=""
+                         class="post-thumbnail">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play absolute d-flex a-center j-center display-none"></div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute bottom-30">
+                                    <div class="text-title background-image">Quân Hữu Vân</div>
+                                </div>
+
+                                <div class="meta-info d-flex  absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="views background-image">36,356 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">truyện tranh</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex  gap-10">
+                    <div class="post static ">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2021/05/18/884fa6f03fd8a139_d28468b67fd2a93e_38974162133094169674.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315 ">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 86</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title  absolute left-0 background-image">
+                                    <div class="text-title padding-left">Khe Hở Không Gian</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2022/05/03/85eb395126d8a3f8_dd8325d22bf492af_32873165157320289674.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315">
+
+                         <div class="Surrounded">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 71</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute left-0 background-image">
+                                    <div class="text-title w-170">Boruto</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2020/06/25/481247c94ae917a7_877cb72891e6b854_551581593080798745957.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 258</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absoluteleft-0 background-image">
+                                    <div class="text-title">Tokyo卍Revengers</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2020/03/10/51cfb8ec403c9f78_5b3661985f5736e8_27614158385745529674.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 1096</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute left-0 background-image">
+                                    <div class="text-title">Thám tử lừng danh Conan</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2021/10/30/47ff33182df2f70c_8daec582137d9d4f_26698163558364829674.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 356</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute left-0 background-image">
+                                    <div class="text-title w-170">Học Viện Anh Hùng</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/tt24/2020/08/01/69c6206afc7d1030_ba8723c4559d3a21_436481596277301645957.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-315">
+
+                         <div class="Surrounded ">
+                            <div class="btn-play-manga absolute d-flex a-center j-center ">Chap 28</div>
+                            <div class="meta absolute d-flex ">
+                                <div class="title padding-left absolute left-0 background-image">
+                                    <div class="text-title">Bokutachi No Remake</div>
+                                </div>
+
+                                <div class="meta-info d-flex absolute left">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <!-- <div class="views">32,644 lượt xem</div> -->
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">bộ sưu tập</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex  gap-10">
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/10/09dd799dff4a355b_a6b32d115628ac50_40892165484315239674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-152">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/03/05/803583cba5d569c2_3c4ab828e8e763bd_117964164647297779674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-152">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2021/12/27/447d92824ddb9779_f3207425776138e9_98651164059040319674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-152">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2021/09/29/819d6a79cd97836d_6bc30ef29cbd18e5_173292163292978929674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-152">
+                         
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">anime movie</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex  gap-10">
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/17/43fe43de19a7e9a0_46caf64600e28459_3566916527819018118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="w-170">Dragon Ball Super:</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">96,309 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/10/f5cbf7851820a58d_370e0ad8022e42ce_3471316521755813118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="w-170">Koukaku Kidoutai:</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">5,285 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/10/2ec92af947e34d07_def5488874fff15f_4684516521757167118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="">Ai no Utagoe wo Kikasete</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">15,462 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/10/c171fa8c56383148_e88aac259f7ae204_3375616521757425118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="">Belle: Ryuu to Sobakasu </div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">12,072 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/10/235a4792e43d5189_eeda4669c9bdd6a9_4475816521757788118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="w-170">Bubble</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">19,172 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/05/10/46b14fbb8eda72b5_215d183116e47567_2710416521759699118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-290">
+
+                         <div class="Surrounded ">
+                            <!-- <div class=""></div> -->
+                            <div class="info-anime absolute">
+                                <div class="name-anime ">
+                                    <div class="w-170">Summer Ghost</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">20,370 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">hôm nay xem gì</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex f-wrap gap-10">
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2021/04/16/5a58d3418d6d7fc7_933eb5f8a07f988d_2962716185477033118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">26/26 tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">El Cazador de la Bruja</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">21,168 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2018/07/06/58dc99099fa08895_14d356d087e9776c_4936715308850354118684.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">45 phút</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Kotonoha no Niwa</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">61,727 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2021/07/04/d1d861dd7fb0ca58_b7884e4059d7ebbc_4149216254049245118684.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">62 phút</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Byousoku 5 Centimeter</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">104,629 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2017/04/02/50c2392af83a1235_a7710b2727b03fb7_11889014911098613185710.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">2 / 12 tập</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Ongaku Shoujo (TV)</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">25,892 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2019/10/29/f9dfdf187293da5f_218de6b317eb7813_4253315723613251185710.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">20 / 999 tập</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Fumetsu no Anata e</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">398,233 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2015/05/thien-khong-chien-ki-tenkuu-senki-shurato-large-1432285074.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">10 / 24 tập</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Shangri-La</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">23,131 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2017/12/04/a1d584e48e47b16e_e8263bcbf8e8bb57_45573151238972119674.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">12 / 12 tập</div>
+
+                            <div class="info-anime absolute  width-280">
+                                <div class="name-anime ">
+                                    <div class="w-170">Seven Knights Revolution</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">19,241 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2016/06/relife-thumbnail-1465888132.jpg"
+                        alt=""
+                         class="post-thumbnail  w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn absolute display-none"></div>
+                            <div class="chapter-all d-flex absolute display-none">12 / 12 tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Kochouki: Wakaki Nobunaga</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">83,280 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">bảng xếp hạng</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex  gap-10">
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2021/05/13/e3c93e9e3ae4c4d1_9a3a2fe806b4ffc6_3775516209096674118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210 h-95">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2019/07/26/6c040a27770ec024_ded1b5147578648e_5019215641124505185710.jpg"
+                        alt=""
+                         class="post-thumbnail w-210  h-95">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/03/21/9033666346a72bc2_d4267122238d3fb6_2660616478676412118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210  h-95">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/04/06/94592e6daea064e0_2547d9d3c691562b_5132616492242902118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210  h-95">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2015/07/su-mang-than-chet-large-1436340459.jpg"
+                        alt=""
+                         class="post-thumbnail w-210  h-95">
+                         
+                    </div>
+                    <div class="post">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/04/13/dbd09f53abc7acee_e578504e0fb106a9_3534716498675076118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-210  h-95">
+                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pd-top-30">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-heading">tất cả anime</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-post d-flex f-wrap gap-10">
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/a1524127d42d3dad_7d6e38dee7334f50_4703216551444695118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center  ">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Teppen!!!!!!!!!!!!!!!</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">326 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/68b5e249764c2033_2a0def4720c296cd_6630116551443648118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Cyberpunk: Edgerunners</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">1,022 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/465fc50d01dc3ead_9570af91e42a10d5_6643116551441495118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Warau Arsnotoria Sun!</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">680 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/80af91f9d15d0259_ed4607dae42bc6e1_11484016551439543118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Kami Kuzu☆Idol</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">662 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/8794425ff5873220_3d8ecfef7dcfc538_17556716551437265118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Shoot! Goal to the Future</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">793 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/c9ea5b95fd38b163_da49485ed79e4bbe_10773016551435464118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Prima Doll</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">590 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/8c8299ffef341c89_f97400f532192843_4564416551431828118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Musashino!</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">444 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/dfbe0adfac17dea1_b38a1edba7a37200_21470216551429512118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Bucchigire!</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">529 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/372f58482eee2e2d_c95f99d31513d7da_4583416551426722118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Fuuto Tantei</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">465 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/14/806c27eb5106a80a_b1f1a84fd0895d70_4685516551422815118684.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Lycoris Recoil</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">290 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/07/a8b88317194a2e7c_98fb3ee2f4ebf7c9_42473165459198929674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Kuro no Shoukanshi</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">431 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="post static">
+                        <img 
+                        src="https://s199.imacdn.com/vg/2022/06/07/2e2ae9004ff717c1_cc01229b9c5f9c5f_53720165459138279674.jpg"
+                        alt=""
+                         class="post-thumbnail w-320 h-180">
+
+                         <div class="Surrounded ">
+                            
+                            <div class="play-btn-footer absolute d-flex a-center j-center text-center">SẮP CHIẾU</div>
+                            <div class="play-btn-layout  absolute d-flex a-center j-center text-center ">SẮP CHIẾU</div>
+                            <div class="chapter-all d-flex absolute display-none">??? tập</div>
+
+                            <div class="info-anime absolute width-280">
+                                <div class="name-anime ">
+                                    <div class="">Hoshi no Samidare</div>
+                                </div>
+
+                                <div class="chapter-anime">
+                                    <!-- <div class="chapter">Tập 12 - Bài hát của Eiko</div> -->
+                                    <div class="view-anime">704 lượt xem</div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
