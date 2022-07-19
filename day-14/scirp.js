@@ -113,3 +113,8 @@ function minMax(arr) {
 
 // quẩn lý các phiên bản của nhánh
 // 
+// *. làm quen với command line (CMD). thực hành ghi nhớ 1 số lệnh cơ bản( thay đổi, tạo thư mục)
+// 1. tạo repository ( không nằm bên trong repo khác, không chứa repo khác). chỉ cần tạo 1 lần Initialize repositiory
+// 2. khi có thay đổi/cập nhật => Stage Change (+)
+// 3. Lưu phiên bản => Commit kèm với message
+// 4. Publish/Sync
