@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photos {
+    padding: 1.2rem;
+    width: 300px;
+    height: 300px;
+   
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+.title {
+    padding: 0.8rem;
+}

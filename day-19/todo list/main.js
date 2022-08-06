@@ -20,14 +20,9 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
 
-// list.addEventListener('click', function(ev) {
-//   if (ev.target.tagName === 'LI') {
-//     ev.target.classList.toggle('checked');
-//   }
-// }, false);
+
+
 
 
 // tạo danh sách khi ấn nút thêm
@@ -76,3 +71,5 @@ function newElement() {
 window.addEventListener("submit",function(e) {
     e.preventDefault();
 })
+
+// const 

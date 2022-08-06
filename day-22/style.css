@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    text-align: center;
+}
+
+.user-name {
+    font-size: 1 rem;
+}
+
+.user-info {
+    
+    position: relative;
+}
+
+.user-name {
+    /* position: absolute; */
+    left: 100%;
+    top: 0;
+    width: 100%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        
+        <div class="container w-464  pt-48">
+            <div class="header">
+                <h2 class=" t-center mb-48">Simple TodoApp</h2>
+            </div>
+            <div class="mb-16 gap-1">
+                    <form action="" class="mb-4" name="todo" id="todo">
+                        <div class="flex">
+                            
+                            <input type="text" name="title" id="myInput" class="input" placeholder="What do you want to do?">
+                            <button class="btn-create"> Create</button>
+                        </div>
+                    </form>
+                    <div class="status flex justify-end gap-5">
+                        <div class="form-check ml-4">
+                            <label for="check-status">
+                                <input type="radio" name="check-status" id="check-status" class="form-check-input all">All
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label for="check-status">
+                                <input type="radio" name="check-status" id="check-status" class="form-check-input">Active
+                            </label>
+        
+                        </div>
+                        <div class="form-check">
+                            <label for="check-status">
+                                <input type="radio" name="check-status" id="check-status" class="form-check-input">Completed
+                            </label>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="app">
+                <ul id="myUL">
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

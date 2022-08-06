@@ -1,0 +1,79 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+.product {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.view {
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 5px 0 5px;
+}
+/*  kích thước màn hình 768px */
+/* @media screen and (min-width: 768px) {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        flex-direction: column;
+        max-width: 50%;
+    }
+} */
+
+/* kích thước màn hình 992px */
+/* @media screen and (min-width: 992px) {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        flex-direction: column;
+        max-width: 33.3333%;
+    }
+} */
+
+/* kích thước màn hình 1200px */
+/* @media screen and (min-width: 1200px) {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        flex-direction: column;
+        max-width: 25%;
+    }
+}  */
+
+
+
+.img {
+    max-width: 100%;
+}

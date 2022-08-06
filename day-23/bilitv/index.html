@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilibili</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .bg-rbg {
+            background-image: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9));
+        }
+       
+    </style>
+</head>
+<body>
+    <section class="section-header position-fixed top-0 start-0 end-0 bg-white border-bottom " style="z-index: 1;">
+        <div class="container m-0 p-3">
+            <div class="row justify-content-center ">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-5 d-flex col-sm-3">
+                            <div class="slidbar align-items-center ">
+                                <div class="list-slide">
+                                    <i class="bi bi-list fs-4 ">
+                            
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="logo ps-4">
+                                <a href="">
+                                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjZweCIgaGVpZ2h0PSIzNHB4IiB2aWV3Qm94PSIwIDAgNjYgMzQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+QDF4dG9wX2xvZ288L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0idG9wX2xvZ28iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnPgogICAgICAgICAgICA8cmVjdCBpZD0i55+p5b2iIiBmaWxsPSIjRDhEOEQ4IiBvcGFjaXR5PSIwIiB4PSIwIiB5PSIwIiB3aWR0aD0iNjYiIGhlaWdodD0iMzQiPjwvcmVjdD4KICAgICAgICAgICAgPHBhdGggZD0iTTQ4LjM5NjAyMDQsMTIuMDY0NzAwMSBDNDguNTQ2NDMwNCwxMi4wODk3Njg0IDQ5LjcyNDY0MjEsMTEuODI2NTUwOSA0OS43NzQ3Nzg3LDExLjkxNDI5IEM0OS44NDk5ODM3LDEyLjAyNzA5NzUgNTAuMzc2NDE4OCwxNS44MTI0MTYgNTAuMjM4NTQyOSwxNS44Mzc0ODQ0IEM1MC4xMDA2NjcxLDE1Ljg2MjU1MjcgNDkuMTIzMDAyLDE2LjA4ODE2NzcgNDkuMTIzMDAyLDE2LjA4ODE2NzcgQzQ5LjA0Nzc5NywxNS41NzQyNjY5IDQ4LjQwODU1NDUsMTIuMzkwNTg4NCA0OC4zOTYwMjA0LDEyLjA2NDcwMDEgTTUwLjI3NjE0NTQsMTEuNzAxMjA5MiBMNTAuNzkwMDQ2MywxNS43NzQ4MTM2IEM1MS4wNTMyNjM4LDE1Ljc2MjI3OTQgNTIuMTE4NjY4LDE1LjY4NzA3NDQgNTIuMjE4OTQxNCwxNS42NzQ1NDAyIEM1Mi4wNjg1MzE0LDE0LjEzMjgzNzYgNTEuODA1MzEzOCwxMS43MDEyMDkyIDUxLjgwNTMxMzgsMTEuNzAxMjA5MiBDNTEuMzAzOTQ3MSwxMS42MDA5MzU5IDUwLjc3NzUxMjEsMTEuNjAwOTM1OSA1MC4yNzYxNDU0LDExLjcwMTIwOTIgTTQ5LjI2MDg3NzksMTcuMzU0MTE4NiBDNDkuMjYwODc3OSwxNy4zNTQxMTg2IDUxLjU3OTY5ODgsMTYuNzY1MDEyOCA1Mi40MTk0ODgsMTcuMDUzMjk4NiBDNTIuODQ1NjQ5NywxOC41OTUwMDEyIDUzLjYyMjc2ODEsMjcuMjQzNTc2NiA1My42OTc5NzMxLDI3LjU5NDUzMzMgQzUzLjE3MTUzODEsMjcuNjU3MjA0MSA1MS40NDE4MjMsMjcuODA3NjE0MSA1MS4zMDM5NDcyLDI3Ljg0NTIxNjYgQzUxLjE5MTEzOTcsMjcuMTkzNDM5OSA0OS4yNjA4Nzc5LDE3Ljc2Nzc0NjEgNDkuMjYwODc3OSwxNy4zNTQxMTg2IE01Ny44NDY3ODI0LDEyLjE2NDk3MzQgQzU3Ljk4NDY1ODMsMTIuMjAyNTc1OSA1OS4yMTMwMDY3LDEyLjAzOTYzMTcgNTkuMjI1NTQwOCwxMi4xMjczNzA5IEM1OS4yNTA2MDkxLDEyLjQyODE5MDkgNTkuMzc1OTUwOCwxNi4wNjMwOTk0IDU5LjIzODA3NSwxNi4wNzU2MzM2IEM1OS4xMDAxOTkyLDE2LjA4ODE2NzcgNTguMTIyNTM0MSwxNi4xNzU5MDY5IDU4LjEyMjUzNDEsMTYuMTc1OTA2OSBDNTguMDk3NDY1OCwxNS42NzQ1NDAyIDU3LjgyMTcxNDEsMTIuNTAzMzk1OSA1Ny44NDY3ODI0LDEyLjE2NDk3MzQgTTU5LjczOTQ0MTcsMTIuMDY0NzAwMSBMNTkuODM5NzE1LDE2LjA4ODE2NzcgQzYwLjEwMjkzMjUsMTYuMDg4MTY3NyA2MS4xNTU4MDI2LDE2LjE1MDgzODYgNjEuMjY4NjEwMSwxNi4xMzgzMDQ0IEM2MS4yNDM1NDE4LDE0LjU5NjYwMTggNjEuMjY4NjEwMSwxMi4xNjQ5NzM0IDYxLjI2ODYxMDEsMTIuMTY0OTczNCBDNjAuNzY3MjQzNCwxMi4wNzcyMzQyIDYwLjI1MzM0MjUsMTIuMDM5NjMxNyA1OS43Mzk0NDE3LDEyLjA2NDcwMDEgTTU4LjEyMjUzNDEsMTcuNDY2OTI2MSBDNTguMTIyNTM0MSwxNy40NjY5MjYxIDYwLjQ5MTQ5MTcsMTcuMTUzNTcxOSA2MS4yOTM2Nzg0LDE3LjUyOTU5NyBDNjEuNDY5MTU2OCwxOS4zMzQ1MTcgNjEuNDQ0MDg4NCwyNy43NDQ5NDMzIDYxLjQ2OTE1NjgsMjguMDk1ODk5OSBDNjAuOTMwMTg3NiwyOC4wOTU4OTk5IDU5LjIxMzAwNjcsMjguMTIwOTY4MyA1OS4wNzUxMzA4LDI4LjE0NjAzNjYgQzU5LjA1MDA2MjUsMjcuNDk0MjU5OSA1OC4wODQ5MzE2LDE3Ljg4MDU1MzYgNTguMTIyNTM0MSwxNy40NjY5MjYxIE01Mi42MjAwMzQ3LDcuMTI2MjM4MTUgQzUzLjk4NjI1ODksMTQuMDk1MjM1MSA1NS4wMjY1OTQ4LDI2LjAwMjY5NCA1NS4wNjQxOTczLDI2Ljc2NzI3ODIgQzU1LjA2NDE5NzMsMjYuNzY3Mjc4MiA1Ni4xNDIxMzU3LDI2Ljc5MjM0NjUgNTcuMzU3OTQ5OSwyNi44Njc1NTE2IEM1Ni42NDM1MDI0LDE5LjM1OTU4NTQgNTUuNzY2MTEwNyw3LjM2NDM4NzMzIDU1Ljc3ODY0NDgsNi45NzU4MjgxNSBDNTUuNDc3ODI0OCw2LjYzNzQwNTYzIDUyLjYyMDAzNDcsNy4xMjYyMzgxNSA1Mi42MjAwMzQ3LDcuMTI2MjM4MTUgTTQ5LjYxMTgzNDYsMjMuNjA4NjY4MSBDNDkuMzQ4NjE3MSwyMS42NTMzMzggNDIuMzU0NTUxOCwxOS40MzQ3OTA0IDM4LjQxODgyMzIsMjAuMTQ5MjM3OSBDMzguNDE4ODIzMiwyMC4xNDkyMzc5IDM3LjkyOTk5MDcsMTUuODM3NDg0NCAzNy43NDE5NzgyLDExLjY2MzYwNjcgQzM3LjU3OTAzNCw4LjA3ODgzNDg4IDM3LjcxNjkwOTksNC41OTQzMzYzOCAzNy43NTQ1MTI0LDQuMDE3NzY0NjggQzM3LjQ5MTI5NDksMy44Mjk3NTIxOCAzNC42NTg1NzMxLDUuMTgzNDQyMjMgMzMuMTI5NDA0Nyw1Ljc0NzQ3OTc1IEMzMy4xMjk0MDQ3LDUuNzQ3NDc5NzUgMzQuOTU5MzkzMSwxMy40OTM1OTUxIDM2LjI4ODAxNDgsMjkuNTYyMzk3NSBDMzYuMjg4MDE0OCwyOS41NjIzOTc1IDM4LjQwNjI4OTEsMjkuNzg4MDEyNSA0Mi4wNDExOTc2LDI5LjA4NjA5OTIgQzQ1LjY3NjEwNiwyOC4zODQxODU4IDQ5Ljk3NTMyNTQsMjYuMTkwNzA2NSA0OS42MTE4MzQ2LDIzLjYwODY2ODEgTTQxLjA2MzUzMjUsMjcuMTMwNzY5MSBMNDAuNDQ5MzU4MywyMi43MDYyMDggQzQwLjU5OTc2ODMsMjIuNjMxMDAzIDQ0LjM3MjU1MjcsMjQuMDM0ODI5OCA0NC43NzM2NDYsMjQuMjg1NTEzMSBDNDQuNzEwOTc1MiwyNC41NjEyNjQ4IDQxLjA2MzUzMjUsMjcuMTMwNzY5MSA0MS4wNjM1MzI1LDI3LjEzMDc2OTEgTTE5LjI2NjYxNTcsMTIuMDY0NzAwMSBDMTkuNDE3MDI1NywxMi4wODk3Njg0IDIwLjU5NTIzNzQsMTEuODI2NTUwOSAyMC42NDUzNzQxLDExLjkxNDI5IEMyMC43MjA1NzkxLDEyLjAyNzA5NzUgMjEuMjQ3MDE0MSwxNS44MTI0MTYgMjEuMTA5MTM4MywxNS44Mzc0ODQ0IEMyMC45NzEyNjI1LDE1Ljg2MjU1MjcgMTkuOTkzNTk3NCwxNi4wODgxNjc3IDE5Ljk5MzU5NzQsMTYuMDg4MTY3NyBDMTkuOTE4MzkyNCwxNS41NzQyNjY5IDE5LjI3OTE0OTksMTIuMzkwNTg4NCAxOS4yNjY2MTU3LDEyLjA2NDcwMDEgTTIxLjE0Njc0MDgsMTEuNzAxMjA5MiBMMjEuNjYwNjQxNiwxNS43NzQ4MTM2IEMyMS45MjM4NTkxLDE1Ljc2MjI3OTQgMjIuOTg5MjYzNCwxNS42ODcwNzQ0IDIzLjA4OTUzNjcsMTUuNjc0NTQwMiBDMjIuOTI2NTkyNSwxNC4xMzI4Mzc2IDIyLjY3NTkwOTIsMTEuNzAxMjA5MiAyMi42NzU5MDkyLDExLjcwMTIwOTIgQzIyLjE3NDU0MjUsMTEuNjAwOTM1OSAyMS42NDgxMDc1LDExLjYwMDkzNTkgMjEuMTQ2NzQwOCwxMS43MDEyMDkyIE0yMC4xMzE0NzMyLDE3LjM1NDExODYgQzIwLjEzMTQ3MzIsMTcuMzU0MTE4NiAyMi40NTAyOTQyLDE2Ljc2NTAxMjggMjMuMjkwMDgzNCwxNy4wNTMyOTg2IEMyMy43MTYyNDUxLDE4LjU5NTAwMTIgMjQuNDkzMzYzNCwyNy4yNDM1NzY2IDI0LjU2ODU2ODQsMjcuNTk0NTMzMyBDMjQuMDQyMTMzNCwyNy42NTcyMDQxIDIyLjMxMjQxODMsMjcuODA3NjE0MSAyMi4xNzQ1NDI1LDI3Ljg0NTIxNjYgQzIyLjA2MTczNSwyNy4xOTM0Mzk5IDIwLjEzMTQ3MzIsMTcuNzY3NzQ2MSAyMC4xMzE0NzMyLDE3LjM1NDExODYgTTI4LjcxNzM3NzgsMTIuMTY0OTczNCBDMjguODU1MjUzNiwxMi4yMDI1NzU5IDMwLjA4MzYwMiwxMi4wMzk2MzE3IDMwLjA5NjEzNjIsMTIuMTI3MzcwOSBDMzAuMTIxMjA0NSwxMi40MjgxOTA5IDMwLjI0NjU0NjIsMTYuMDYzMDk5NCAzMC4xMDg2NzA0LDE2LjA3NTYzMzYgQzI5Ljk3MDc5NDUsMTYuMDg4MTY3NyAyOC45OTMxMjk1LDE2LjE3NTkwNjkgMjguOTkzMTI5NSwxNi4xNzU5MDY5IEMyOC45NjgwNjEyLDE1LjY3NDU0MDIgMjguNzA0ODQzNiwxMi41MDMzOTU5IDI4LjcxNzM3NzgsMTIuMTY0OTczNCBNMzAuNjEwMDM3MSwxMi4wNjQ3MDAxIEwzMC43MTAzMTA0LDE2LjA4ODE2NzcgQzMwLjk3MzUyNzksMTYuMDg4MTY3NyAzMi4wMjYzOTc5LDE2LjE1MDgzODYgMzIuMTM5MjA1NSwxNi4xMzgzMDQ0IEMzMi4xMTQxMzcxLDE0LjU5NjYwMTggMzIuMTM5MjA1NSwxMi4xNjQ5NzM0IDMyLjEzOTIwNTUsMTIuMTY0OTczNCBDMzEuNjM3ODM4OCwxMi4wNzcyMzQyIDMxLjEyMzkzNzksMTIuMDUyMTY1OSAzMC42MTAwMzcxLDEyLjA2NDcwMDEgTTI4Ljk5MzEyOTUsMTcuNDY2OTI2MSBDMjguOTkzMTI5NSwxNy40NjY5MjYxIDMxLjM2MjA4NzEsMTcuMTUzNTcxOSAzMi4xNjQyNzM4LDE3LjUyOTU5NyBDMzIuMzM5NzUyMSwxOS4zMzQ1MTcgMzIuMzE0NjgzOCwyNy43NDQ5NDMzIDMyLjMzOTc1MjEsMjguMDk1ODk5OSBDMzEuODAwNzgyOSwyOC4wOTU4OTk5IDMwLjA4MzYwMiwyOC4xMjA5NjgzIDI5Ljk0NTcyNjIsMjguMTQ2MDM2NiBDMjkuOTMzMTkyLDI3LjQ5NDI1OTkgMjguOTU1NTI3LDE3Ljg4MDU1MzYgMjguOTkzMTI5NSwxNy40NjY5MjYxIE0yMy40OTA2MzAxLDcuMTI2MjM4MTUgQzI0Ljg1Njg1NDMsMTQuMDk1MjM1MSAyNS44OTcxOTAyLDI2LjAwMjY5NCAyNS45MzQ3OTI3LDI2Ljc2NzI3ODIgQzI1LjkzNDc5MjcsMjYuNzY3Mjc4MiAyNy4wMTI3MzEsMjYuNzkyMzQ2NSAyOC4yMjg1NDUzLDI2Ljg2NzU1MTYgQzI3LjUxNDA5NzgsMTkuMzU5NTg1NCAyNi42MzY3MDYsNy4zNjQzODczMyAyNi42NDkyNDAyLDYuOTYzMjkzOTggQzI2LjM0ODQyMDIsNi42Mzc0MDU2MyAyMy40OTA2MzAxLDcuMTI2MjM4MTUgMjMuNDkwNjMwMSw3LjEyNjIzODE1IE0yMC40ODI0Mjk5LDIzLjYwODY2ODEgQzIwLjIxOTIxMjQsMjEuNjUzMzM4IDEzLjIyNTE0NzEsMTkuNDM0NzkwNCA5LjI4OTQxODU4LDIwLjE0OTIzNzkgQzkuMjg5NDE4NTgsMjAuMTQ5MjM3OSA4LjgwMDU4NjA1LDE1LjgzNzQ4NDQgOC42MTI1NzM1NSwxMS42NjM2MDY3IEM4LjQ0OTYyOTM4LDguMDc4ODM0ODggOC41ODc1MDUyMyw0LjU5NDMzNjM4IDguNjI1MTA3Nyw0LjAxNzc2NDY4IEM4LjM2MTg5MDIsMy44NDIyODYzMyA1LjUyOTE2ODQsNS4xODM0NDIyMyA0LDUuNzQ3NDc5NzUgQzQsNS43NDc0Nzk3NSA1LjgyOTk4ODQyLDEzLjQ5MzU5NTEgNy4xNTg2MTAxNSwyOS41NjIzOTc1IEM3LjE1ODYxMDE1LDI5LjU2MjM5NzUgOS4yNzY4ODQ0MiwyOS43ODgwMTI1IDEyLjkxMTc5MjksMjkuMDg2MDk5MiBDMTYuNTQ2NzAxNCwyOC4zODQxODU4IDIwLjg0NTkyMDcsMjYuMTkwNzA2NSAyMC40ODI0Mjk5LDIzLjYwODY2ODEgTTExLjkzNDEyNzksMjcuMTMwNzY5MSBMMTEuMzE5OTUzNywyMi43MDYyMDggQzExLjQ3MDM2MzcsMjIuNjMxMDAzIDE1LjI0MzE0OCwyNC4wMzQ4Mjk4IDE1LjY0NDI0MTQsMjQuMjg1NTEzMSBDMTUuNTgxNTcwNSwyNC41NjEyNjQ4IDExLjkzNDEyNzksMjcuMTMwNzY5MSAxMS45MzQxMjc5LDI3LjEzMDc2OTEiIGlkPSLlvaLnirYiIGZpbGw9IiMwMEExRDYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+"
+                                    alt="bilibili-icon">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 d-none d-sm-inline-block position-relative ">
+                            
+                            <input class="btn-search w-100 h-100 rounded-5 border bg-white" placeholder="Tìm kiếm">
+                                <div class="search pe-3 d-none d-sm-inline-block position-absolute top-0 end-0 ">
+                                    <a href="" class="text-dark">
+                                        <i class="bi bi-search fs-5 "></i>
+                                    </a>
+                                </div>
+                            </input>
+                            
+                            
+                        </div>
+
+                        <div class="col-7 col-sm-3 d-flex fs-4 justify-content-end  position-absolute end-0">
+                            <div class="search pe-3 d-sm-none">
+                                <a href="" class="text-dark">
+                                    <i class="bi bi-search fs-4"></i>
+                                </a>
+                            </div>
+
+                            <div class="upload pe-3 pe-sm-4">
+                                <a href="" class="text-dark">
+                                    <i class="bi bi-box-arrow-up"></i>
+                                </a>
+                            </div>
+
+                            <div class="history pe-3 pe-sm-4">
+                                <a href=""class="text-dark">
+                                    <i class="bi bi-clock"></i>
+                                </a>
+                            </div>
+
+                            <div class="fav pe-3 pe-sm-4">
+                                <a href=""class="text-dark">
+                                    <i class="bi bi-bookmark-plus"></i>
+                                </a>
+                            </div>
+
+                            <div class="user pe-3 pe-sm-4">
+                                <a href=""class="text-dark">
+                                    <i class="bi bi-person-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container rounded-5" style="padding-top: 88px;">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" >
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://i.pinimg.com/originals/b1/d3/7c/b1d37c28a584badcdf9d1121a201a617.jpg" class="d-block w-100 rounded-5" alt="..." >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://maytinhvui.com/wp-content/uploads/2021/02/Hinh-nen-anime-34-min.jpg" class="d-block w-100 rounded-5" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://hacoled.com/wp-content/uploads/2022/02/anh-bai-viet-hinh-nen-anime.jpg" class="d-block w-100 rounded-5" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content pt-5 mt-4">
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 ps-5 pe-5">
+                    <div class="header d-flex justify-content-between p-3">
+                        <h3 class="fs-5">Top Video</h3>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/a0c5a734e31a9addedf8f8aa162610f8.jpg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3">
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                                "Naruto" Thực ra chú Rắn hy vọng sẽ hồi sinh Jiraiya hơn bất cứ ai khác
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                                Nalanmubai · 12.3K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/eccf864befd737f728fe3e50c5b72286.jpg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3">
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                
+                                                 Khoảnh Khắc | Khi bạn nhận ra top sever quá mạnh
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                
+                                                Sou_Ei · 3.9K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-12 col-sm-6  col-lg-4">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/631b9be8f41c86dec0de83f0610dd5d0.jpg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3">
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                                "
+                                                Diệt slime suốt 300 năm,tôi vô tình gặp Rimuru và  ....🤣?
+                                
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                
+                                                Rồng otaku · 8.1K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-12 col-sm-6  col-lg-4">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/88bd36b832ba6ffe10b49f6dd0dceced.jpeg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3">
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                
+                                                 Đời sống|Thanh Gươm Diệt Quỷ|Cosplay Sabito
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                
+                                                Yelinlinlin · 8.6K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/4d6c4dc398280fe364ecd107034b4cb8.jpeg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3" >
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                
+                                                 Game | Genshin Impact | Gura sau khi biết nguồn gốc của sữa
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                
+                                              Woshiyizhipingfanderen · 7.1K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="thumbnail ">
+                                        <a href="">
+                                            <img src="https://pic-bstarstatic.akamaized.net/ugc/17a2ac30a6f4222cef4457d23e716b7d.jpg@720w_406h_1e_1c_1f.webp"
+                                             alt="" class="w-100 rounded ">
+                                        </a>
+                                    </div>
+                                    <div class="title pt-3">
+                                        <a href="" class="text-decoration-none">
+                                            <p class="text-black m-0">
+                                
+                                                 vợ cưng 😍
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="meta">
+                                        <div class="sub-meta">
+                                            <p>
+                                
+                                               ToànCóNyNè · 4.4K Lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                           
+                       
+                    </div>
+
+                    
+
+                   
+
+                   
+
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header d-flex justify-content-between p-3">
+                        <h3 class="fs-5">Đề xuất</h3>
+                        <!-- <i class="bi bi-chevron-right"></i> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4 col-sm-3 col-md-2" >
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/tt24/2020/02/28/8d6d35f1c174751e_35b873941cbe1e6f_52428158288498841.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta ">
+                            
+                             578.1K Lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <div class="thumbnail ">
+                            <img src="https://s199.imacdn.com/tt24/2022/07/12/1adb6843b06ba68f_c6d77620d5f611eb_42303165761546699674.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                             578.1K Lượt xem
+      
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/tt24/2022/07/05/91a42e641197f6b5_89711b3d9576358e_38827165700603279674.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                             578.1K Lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-md-2 d-none d-sm-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/tt24/2020/03/26/fc12a9adfe8c46db_a5a7c707c2bd1dcf_345821585240484445957.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                             578.1K Lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 d-none d-md-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/tt24/2021/09/04/f56d4081f1094cc4_be8010977e3cc9db_48240163075663289674.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                             578.1K Lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 d-none d-md-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/tt24/2020/03/26/94cdf6ec5a01537d_b28b9a7c8449aac0_327681585241518445957.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Trấn Hồn Nhai Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                             578.1K Lượt xem
+      
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header d-flex justify-content-between p-3">
+                        <h3 class="fs-5">Bảng xếp hạng</h3>
+                        <!-- <i class="bi bi-chevron-right"></i> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4 col-sm-3 col-md-2" >
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/vg/2022/05/17/43fe43de19a7e9a0_46caf64600e28459_3566916527819018118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Dragon Ball Super: Super Hero
+                            </p>
+                        </div>
+
+                        <div class="meta ">
+                            
+                            113,897 lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <div class="thumbnail ">
+                            <img src="https://s199.imacdn.com/vg/2022/05/10/f5cbf7851820a58d_370e0ad8022e42ce_3471316521755813118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Koukaku Kidoutai:Jizoku Kanou
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                            7,648 lượt xem
+      
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/vg/2022/05/10/2ec92af947e34d07_def5488874fff15f_4684516521757167118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Ai no Utagoe wo Kikasete
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                            21,421 lượt xem 
+      
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-md-2 d-none d-sm-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/vg/2022/05/10/c171fa8c56383148_e88aac259f7ae204_3375616521757425118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Belle: Ryuu to Sobakasu no Hime
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                            17,052 lượt xem
+      
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 d-none d-md-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/vg/2022/05/10/235a4792e43d5189_eeda4669c9bdd6a9_4475816521757788118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Bubble
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                            26,400 lượt xem
+      
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 d-none d-md-block">
+                        <div class="thumbnail">
+                            <img src="https://s199.imacdn.com/vg/2022/05/10/46b14fbb8eda72b5_215d183116e47567_2710416521759699118684.jpg" 
+                            alt="" class="w-100 h-100">
+                        </div>
+
+                        <div class="title pt-3">
+                            <p class="mb-0">
+                                Summer Ghost
+                            </p>
+                        </div>
+
+                        <div class="meta">
+                            
+                            26,698 lượt xem
+      
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header d-flex justify-content-between p-3">
+                        <h3 class="fs-5">Mới nhất</h3>
+                        <!-- <i class="bi bi-chevron-right"></i> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2" >
+                        <div class="thumbnail bg-rbg">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/The-Gioi-Hoan-My.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3" >
+                        </div>
+
+                        <div class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Thế Giới Hoàn Mỹ
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 70
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Tay-Hanh-Ky-4.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div class="title position-absolute text-white" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0" style="margin-left: 25px; ">
+                                Tây Hành Kỷ Phần 4
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 12
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Tinh-Vo-Than-Quyet-2.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div class="title position-absolute text-white" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0" style="margin-left: 25px; ">
+                                Tinh Võ Thần Quyết Phần 2
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 16
+      
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/Nghich-Thien-Chi-Ton.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Nghịch Thiên Chí Tôn
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 116
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/Cuu-Thien-Huyen-De-Quyet.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Cửu Thiên Huyền Đế Quyết
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 68
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/Linh-Kiem-Ton-4.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Linh Kiếm Tôn
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 303
+      
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/Vo-Thuong-Than-De-2.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Vô Thượng Thần Đế
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 193
+      
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Than-Mo.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Thần Mộ
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 4
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Than-An-Vuong-Toa.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Thần Ấn Vương Tọa
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 18
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Quan-Huu-Van.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Quân Hữu Vân
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 17
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/Tien-Vu-Thuong-Khung.jpg?fit=320%2C448&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white bg-rgb ps-4" style="bottom: 10px; left: 0; right: 0;">
+                            <p class="mb-0">
+                                Tiên Vũ Thương Khung
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 17
+      
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 position-relative pt-2">
+                        <div class="thumbnail">
+                            <img src="https://i0.wp.com/hhhkungfu.tv/wp-content/uploads/2022/01/Van-Gioi-Than-Chu-3.jpg?fit=320%2C449&ssl=1" 
+                            alt="" class="w-100 h-100 rounded-3">
+                        </div>
+
+                        <div  class="title position-absolute text-white" style="bottom: 10px; left: 15px; right: 0; width: 255px;">
+                            <p class="mb-0" style="margin-left: 25px; ">
+                                Tần Thời Minh Nguyệt
+                            </p>
+                        </div>
+
+                        <div class="meta position-absolute bg-white bg-opacity-75 rounded-3" style="top: 20px; left: 20px;">
+                            
+                            Tập 37
+      
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
